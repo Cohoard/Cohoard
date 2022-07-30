@@ -19,15 +19,15 @@ module.exports = {
     },
     // historyApiFallback: true,
     proxy: {
-      '/**': 'http://localhost:3000',
+      '/': 'http://localhost:3000',
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
-      template: './client/index.html',
+      template: path.join(__dirname, 'client', 'index.html'),
       // inject: false,
-      minify: false
+      // minify: false
     }),
   ],
   module: {
