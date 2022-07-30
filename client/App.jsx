@@ -8,21 +8,25 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function App() {
   return (
-      <>
-    <Navbar bg="light" variant="light">
+    <>
+      <Navbar bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">Cohoard</Navbar.Brand>
+          
           <Nav className="me-auto">
-            <Nav.Link href="#dashBoard">Dashboard</Nav.Link>
+            <LinkContainer to="/dashboard">
+              <Nav.Link href="#dashboard">Dashboard</Nav.Link>
+            </LinkContainer>
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#resources">Resources</Nav.Link>
             <LinkContainer to="/login">
-            <Nav.Link href="#login">Log In</Nav.Link>
+              <Nav.Link href="#login">Log In</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/signup">
-            <Nav.Link href="#signup">Sign Up</Nav.Link>
+              <Nav.Link href="#signup">Sign Up</Nav.Link>
             </LinkContainer>
           </Nav>
+        
         </Container>
       </Navbar>
     </>
