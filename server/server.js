@@ -3,6 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = 3000;
+const MONGO_URI = 'mongodb+srv://cohoardDB:Vcb7gPGN3mExAiKs@cluster0.lrrzt.mongodb.net/?retryWrites=true&w=majority';
+
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.once('open', () => {
+  console.log('Connected to the database');
+})
+
 
 app.use(express.json());
 
