@@ -24,8 +24,12 @@ root.render(
             <Route path="/" element={<App />}/>
                 <Route path='/signup' element={<Signup />} />
                 <Route path="/login" element={<Login />}/>
-            {/* </Route> */}
-            
+            <Route path="/unit1" element={<Unit1 />}/>
+            <Route path="/unit2" element={<Unit2 />}/>
+            <Route path="/unit3" element={<Unit3 />}/>
+            <Route path="/unit4" element={<Unit4 />}/>
+            <Route path="/unit5" element={<Unit5 />}/>
+            <Route path="/unit6" element={<Unit6 />}/>
         </Routes>
     </BrowserRouter>
 );
