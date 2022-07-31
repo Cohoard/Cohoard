@@ -2,6 +2,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./stylesheets/styles.scss";
 import App from "./App";
 import Dashboard from './components/Dashboard';
 import Signup from './components/Signup';
@@ -19,14 +20,14 @@ const root = createRoot(
   );
 
 root.render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />}/>
-                <Route path='/signup' element={<Signup />} />
-                <Route path="/login" element={<Login />}/>
-            {/* </Route> */}
-            
-        </Routes>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}/>
+      <Route path='/signup' element={<Signup />} />
+      <Route path="/login" element={<Login />}/>
+      <Route path="/dashboard" element={<Dashboard />}/>
+      {/* </Route> */}        
+    </Routes>
+  </BrowserRouter>
 );
 

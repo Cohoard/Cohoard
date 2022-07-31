@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ObjectId = require('mongodb').ObjectId;
 const Comment = require('./commentModel.js');
 
 const unit  = new mongoose.Schema({
@@ -12,7 +13,7 @@ const unit  = new mongoose.Schema({
   // A DocumentArray of Comment documents (crefer to commentModel.js). Essentially an array of Comment documents but with
   //additional functionality. For more info on DocumentArray, refer to https://mongoosejs.com/docs/2.7.x/docs/embedded-documents.html and
   //https://masteringjs.io/tutorials/mongoose/array
-  comments: [Comment]
+  comments: [{ type: ObjectId, ref: Comment }]
 });
 
 module.exports = mongoose.model('Unit', unit);
