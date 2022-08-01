@@ -19,7 +19,7 @@ module.exports = {
     },
     // historyApiFallback: true,
     proxy: {
-      '/': 'http://localhost:3000',
+      '/**': 'http://localhost:3000',
     },
   },
   plugins: [
@@ -46,6 +46,10 @@ module.exports = {
         test: /\.s?css/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
