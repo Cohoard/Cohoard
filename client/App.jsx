@@ -29,6 +29,7 @@ function App() {
             <Nav.Link href='#features'>Features</Nav.Link>
             <Nav.Link href='#resources'>Resources</Nav.Link>
           </Nav>
+        
         </Container>
       </Navbar>
       <Outlet />
