@@ -22,12 +22,24 @@ userController.createNewUser = async (req, res, next) => {
 
 userController.verifyUser = async (req, res, next) => {
   try {
-   const { username, password } = req.params;
-   console.log('is this working', req.params)
-   const verifieduser = await User.find({
-    username: req.params.username, password: req.params.password
+   const { username, password } = req.body;
+   console.log('is verifyUser working', req.body)
+   const verifiedUser = await User.find({
+    username: req.body.username
    });
-   res.locals.user = verifiedUser;
+  
+   if (verifiedUser.length !== 0) {
+    if (req.body.password === verifiedUser[0].password) {
+      res.locals.user = verifiedUser[0].username;
+    }
+    else {
+      res.locals.user = 'Incorrect Password';
+    }
+   }
+   else {
+    res.locals.user = 'User Not Found';
+   }
+
    return next();
   } catch(err) {
    next({

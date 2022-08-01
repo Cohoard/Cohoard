@@ -32,7 +32,7 @@ export default function Signup() {
       .then((response) => response.json())
       .then((data) => {
         console.log('Success: FROM INSIDE HANDLESIGNUP');
-          navigate("/login")
+        navigate("/dashboard")
       })
       .catch((error) => {
         console.error('Error:', error);

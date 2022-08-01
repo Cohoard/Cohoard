@@ -35,8 +35,17 @@ const [auth, setAuth] = useState({
       .then((response) => response.json())
       .then((data) => {
      
+        console.log(data)
+        if (data === login.username) {
           setAuth(auth.auth = true);
-          navigate("/dashboard")
+          navigate("/dashboard");
+        }
+        else if (data === 'User Not Found') {
+          navigate('/signup');
+        }
+        else if (data === 'Incorrect Password') {
+          //Display that password is incorrect
+        }
         
       })
       .catch((error) => {
