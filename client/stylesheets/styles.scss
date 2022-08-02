@@ -14,7 +14,7 @@ $grey: #d4d3d3;
 * {
   border-radius: 7px;
   background-color: $background;
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', sans-serif !important;
 }
 
 #homeicon {
@@ -128,8 +128,7 @@ $grey: #d4d3d3;
   background-color: $whiteTXT !important;
 }
 
-.flexcontainer {
-}
+
 
 form {
   border-radius: 0px;
@@ -189,3 +188,27 @@ input {
 #OR {
   color: $grey;
 }
+
+.commentdiv {
+  height: fit-content;
+  width: fit-content;
+  background-color: $logobg;
+  text-align: center ;
+  padding: 10px;
+margin: auto;
+border-radius: 30px;
+opacity: .5;
+}
+
+li {
+  background-color: $logobg;
+  margin: auto;
+}
+
+.unitcontainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
+

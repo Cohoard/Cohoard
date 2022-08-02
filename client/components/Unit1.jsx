@@ -1,9 +1,12 @@
 import React from "react"
+import { useState } from 'react';
+import Comments from './Comments';
 
 export default function Unit1() {
+
   return (
-    <div>
-      <h4>Unit 1</h4>
+    <div className="unitcontainer">
+      <h4>Unit 1: JS Fundamentals </h4>
       <div className="youtube"> 
         <div className='YTTitle'>Youtube Videos </div>
         <div className="videoWrapper">
@@ -22,6 +25,7 @@ export default function Unit1() {
           <a href="https://code.tutsplus.com/articles/the-best-way-to-deep-copy-an-object-in-javascript--cms-39655">Shallow vs. Deep Clone</a>
         </div>
       </div>
+      <Comments />
     </div>
   )
 }

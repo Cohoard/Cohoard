@@ -27,7 +27,7 @@ root.render(
       <Route path="/" element={<PublicHome/>}/>
       <Route path='/signup' element={<Signup />} />
       <Route path="/login" element={<Login />}/>
-      <Route path="/dashboard" element={<Dashboard />}/>
+      <Route path="/dashboard/*" element={<Dashboard />}/>
       </Route>        
     </Routes>
   </BrowserRouter>

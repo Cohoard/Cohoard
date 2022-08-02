@@ -5,43 +5,47 @@ const userController = {};
 
 userController.createNewUser = async (req, res, next) => {
   try {
-    const { first_name, last_name, username, password } = req.body;
-    console.log(
-      'THIS IS FROM CREATENEWUSER',
-      first_name,
-      last_name,
-      username,
-      password
-    );
-    const userDoc = await User.create({
-      first_name,
-      last_name,
-      username,
-      password,
-    });
-    res.locals.user = userDoc;
-    return next();
-  } catch (err) {
-    next({
-      log: `createNewUser: ERROR: ${err}`,
-      message: { err: 'Error occurred in the User controller' },
-    });
+   const { first_name, last_name, username, password } = req.body;
+   console.log('is this working',  first_name, last_name, username, password)
+   const userDoc = await User.create({
+    first_name, last_name, username, password
+   });
+   res.locals.user = userDoc;
+   return next();
+  } catch(err) {
+   next({
+     log: `createNewUser: ERROR: ${err}`,
+     message: {err: 'Error occurred in the User controller'}
+   });
   }
-};
+}
 
 userController.verifyUser = async (req, res, next) => {
   try {
-    console.log('AR WE ENTERING THIS VERIFYUSER');
-    const { username, password } = req.body;
-    console.log('THIS IS FROM VERIFYUSER', req.body);
-    const verifiedUser = await User.findOne({ username, password }).exec();
-    res.locals.user = verifiedUser;
-    return next();
-  } catch (err) {
-    next({
-      log: `verifyUser: ERROR: ${err}`,
-      message: { err: 'Error occurred in the userController.verifyUser' },
-    });
+   const { username, password } = req.body;
+   console.log('is verifyUser working', req.body)
+   const verifiedUser = await User.find({
+    username: req.body.username
+   });
+  
+   if (verifiedUser.length !== 0) {
+    if (req.body.password === verifiedUser[0].password) {
+      res.locals.user = verifiedUser[0].username;
+    }
+    else {
+      res.locals.user = 'Incorrect Password';
+    }
+   }
+   else {
+    res.locals.user = 'User Not Found';
+   }
+
+   return next();
+  } catch(err) {
+   next({
+     log: `createNewUser: ERROR: ${err}`,
+     message: {err: 'Error occurred in the User controller'}
+   });
   }
-};
+}
 module.exports = userController;
