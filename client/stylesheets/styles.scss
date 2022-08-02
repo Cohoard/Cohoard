@@ -1,0 +1,217 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
+
+$background: #e0ffe3;
+$navbar: #00a955e1;
+$logobg: #4dd0f9;
+$logoBlue: #33a0ff;
+$logoGreen: #33ff7e;
+$inputblue: #33a0ff;
+$altLTBlue: #69e3e7;
+$whiteTXT: #f5f5f5;
+$grey: #d4d3d3;
+
+* {
+  border-radius: 7px;
+  background-color: $background;
+  font-family: 'Cuprum', sans-serif !important;
+}
+
+#homeicon {
+  background-color: $navbar;
+}
+
+#navbarpersist {
+  background-origin: $navbar !important;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: $navbar !important;
+}
+.navbar {
+  background-color: $navbar !important;
+}
+.navbar-expand {
+  background-color: $navbar !important;
+}
+
+.navbar-light {
+  background-color: $navbar !important;
+}
+
+.container {
+  background-color: $navbar !important;
+}
+
+.navbar-brand {
+  background-color: $navbar !important;
+}
+.me-auto {
+  background-color: $navbar !important;
+}
+.navbar-nav {
+  background-color: $navbar !important;
+}
+
+.nav {
+  background-color: $navbar !important;
+}
+
+.nav-link {
+  background-color: $navbar !important;
+}
+
+::placeholder {
+  color: $whiteTXT;
+  opacity: 0.65;
+}
+
+.prelogin {
+  display: grid;
+  align-content: stretch;
+  flex-direction: column;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 0px;
+}
+
+.startbuttons {
+  border-radius: 0px;
+  align-self: center;
+  position: relative;
+  margin: auto;
+  height: 65px;
+  width: 300px;
+  font-size: x-large;
+  font-style: Bold;
+  line-height: 46px;
+  text-align: center;
+  color: #f5f5f5;
+  outline: none;
+}
+
+.btnbreak {
+  height: 100px;
+}
+#gettingstarted {
+  background: rgb(51, 160, 255);
+  box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.167);
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  opacity: 1;
+}
+#gettingstarted:hover {
+  opacity: 0.75;
+}
+#alreadybutton {
+  background: #00d66a;
+  box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.167);
+  border-radius: 20px;
+  border: none;
+  opacity: 1;
+}
+#alreadybutton:hover {
+  opacity: 0.5;
+}
+.centerme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#accordiondiv {
+}
+.accordionheader {
+  background-color: $whiteTXT !important;
+}
+
+
+
+form {
+  border-radius: 0px;
+  align-self: center;
+  position: relative;
+  margin: auto;
+  height: 65px;
+  width: 300px;
+  font-size: x-large;
+  font-style: Bold;
+  line-height: 46px;
+  text-align: center;
+  color: #f5f5f5;
+  outline: none;
+}
+
+input {
+  color: #f5f5f5;
+  height: 65px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: $inputblue;
+  border: none;
+  box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.167);
+}
+
+#submitbutton {
+  color: #f5f5f5;
+  background: #00d66a;
+  height: 65px;
+  width: 300px;
+  box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.167);
+  border-radius: 20px;
+  border: none;
+  opacity: 1;
+}
+
+#submitbutton:hover {
+  opacity: 0.5;
+}
+
+.oauthbutton {
+  color: $whiteTXT;
+  background: $altLTBlue;
+  height: 65px;
+  width: 125px;
+  box-shadow: 5px 7px 8px rgba(0, 0, 0, 0.167);
+  border-radius: 20px;
+  border: none;
+  opacity: 1;
+}
+
+.oauthbutton:hover {
+  opacity: 0.5;
+}
+
+#OR {
+  color: $grey;
+}
+
+.commentdiv {
+  height: fit-content;
+  width: fit-content;
+  background-color: $logobg;
+  text-align: center ;
+  padding: 10px;
+margin: auto;
+border-radius: 30px;
+opacity: .5;
+}
+
+li {
+  background-color: $logobg;
+  margin: auto;
+}
+
+.unitcontainer {
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+
+}
+
+.maybe {
+  background-color: $logoBlue;
+}
