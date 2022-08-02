@@ -9,9 +9,10 @@ import logo from '../assets/SVGMAINLOGO.svg';
 export default function PublicHome() {
   return (
     <div className='prelogin'>
+      <br></br>
+      <br></br>
+       <img src={require('../assets/cohoard.png')}/>
       <br></br> <br></br>
-      <br></br>
-      <br></br>
       <br></br>
       <br></br>
       <br></br>
@@ -33,6 +34,7 @@ export default function PublicHome() {
             I already have an account
           </button>
         </Link>
+      
       </div>
     </div>
   );

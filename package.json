@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Cohoard/Cohoard#readme",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.18.10",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.0",
     "jsonwebtoken": "^8.5.1",

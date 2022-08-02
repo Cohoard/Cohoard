@@ -45,6 +45,8 @@ const handleEditSubmit = (event) => {
       currentComment = el;
     }
   });
+  currentComment.body = document.querySelector(`[name=${currentComment._id}]`).value;
+  console.log(currentComment.body);
   fetch('/allComments', {
     method: 'PATCH',
     body: JSON.stringify({ id, body} = currentComment),
@@ -74,8 +76,8 @@ const updateInputState = (length) => {
       <br></br>
       {allCommentsInput[i] ? 
       <div>
-        <input type='text' name={`update${i}`}/> 
-        <button className='oauthbutton' name={allComments[i]._id} id={i} onClick={handleEditSubmit} value={}>CONFIRM EDIT</button>
+        <input className="maybe" type='text' name={`update${i}`}/> 
+        <button className='oauthbutton' name={allComments[i]._id} id={i} onClick={handleEditSubmit} placeholder={allComments[i].body}>CONFIRM EDIT</button>
       </div> : <></>}
       <button className='oauthbutton' name={allComments[i]._id} id={i} onClick={handleCommentEdit}>EDIT</button> 
       <button className='oauthbutton' name={allComments[i]._id} id={i} onClick={handleCommentDelete}>DELETE</button>

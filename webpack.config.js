@@ -34,13 +34,12 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
+                    exclude: /node_modules/,
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        plugins: ['@babel/plugin-transform-runtime', '@babel/transform-async-to-generator'],
+                    }
       },
       {
         test: /\.s?css/,
